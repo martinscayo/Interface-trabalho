@@ -1,0 +1,176 @@
+.card-servico {
+  height: 100%;
+}
+
+.card-servico-inner {
+  height: 100%;
+  min-height: 310px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 185, 129, 0.08),
+      rgba(255, 255, 255, 0.025)
+    ),
+    rgba(13, 24, 20, 0.78);
+
+  border: 1px solid rgba(16, 185, 129, 0.14);
+  border-radius: 28px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-servico-inner::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -60px;
+  top: -60px;
+  background: radial-gradient(
+    circle,
+    color-mix(
+      in srgb,
+      var(--card-color, var(--color-accent)) 32%,
+      transparent
+    ),
+    transparent 65%
+  );
+  opacity: 0.45;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card-servico-inner:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: color-mix(
+    in srgb,
+    var(--card-color, var(--color-accent)) 45%,
+    transparent
+  );
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.38),
+    0 0 35px color-mix(
+      in srgb,
+      var(--card-color, var(--color-accent)) 18%,
+      transparent
+    );
+}
+
+.card-servico-inner:hover::before {
+  opacity: 0.8;
+  transform: scale(1.12);
+}
+
+/* Ícone */
+.card-servico-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(
+        in srgb,
+        var(--card-color, var(--color-accent)) 22%,
+        transparent
+      ),
+      rgba(255, 255, 255, 0.04)
+    );
+
+  border: 1px solid color-mix(
+    in srgb,
+    var(--card-color, var(--color-accent)) 28%,
+    transparent
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--card-color, var(--color-accent));
+  flex-shrink: 0;
+
+  box-shadow:
+    0 0 24px color-mix(
+      in srgb,
+      var(--card-color, var(--color-accent)) 18%,
+      transparent
+    );
+}
+
+/* Tag */
+.card-servico-tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--card-color, var(--color-accent));
+
+  background:
+    color-mix(
+      in srgb,
+      var(--card-color, var(--color-accent)) 12%,
+      transparent
+    );
+
+  border: 1px solid color-mix(
+    in srgb,
+    var(--card-color, var(--color-accent)) 28%,
+    transparent
+  );
+
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* Texto */
+.card-servico-titulo {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.card-servico-descricao {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+
+/* Link */
+.card-servico-link {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--card-color, var(--color-accent));
+  text-decoration: none;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card-servico-link:hover {
+  opacity: 0.9;
+  transform: translateX(4px);
+}
