@@ -6,8 +6,7 @@ Projeto desenvolvido para a disciplina de Desenvolvimento Front-End utilizando B
 
 ## Colaboradores do Projeto
 
-- André Luiz Martins Fávero
-- Guilherme Otto de Souza Leal
+- Cayo Martins de Jorge Souza
 
 ---
 
